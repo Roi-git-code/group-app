@@ -38,3 +38,60 @@
   width: auto;
   padding: 10px 20px;
 }
+
+/* Group Selection Styles */
+.group-options {
+  margin-top: 15px;
+}
+
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.special-groups {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.group-option {
+  position: relative;
+}
+
+.group-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.group-option label {
+  display: block;
+  padding: 12px 15px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.group-option input[type="radio"]:checked + label {
+  background: #4CAF50;
+  color: white;
+}
+
+.group-option label:hover {
+  background: #e0e0e0;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}

@@ -1,28 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join a Group</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/group.css">
 </head>
 <body>
   <div class="card">
-    <h1>Join a Group</h1>
+    <h1>Join a Study Group</h1>
     <form id="groupForm">
-     
-<select id="userSelect" required>
-  <option value="">Loading users...</option>
-</select>
-     
-       <select id="groupNumber" required>
-        <option value="">-- Select Number (1-12) --</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <!-- ... up to 12 ... -->
-      </select>
+      <div class="form-group">
+        <label for="userSelect">Select Your Name:</label>
+        <select id="userSelect" required>
+          <option value="">-- Loading Users --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Select Group Number:</label>
+        <div class="group-options">
+          <!-- Standard Groups 1-12 -->
+          <div class="group-grid">
+            <% for(let i=1; i<=12; i++) { %>
+              <div class="group-option">
+                <input type="radio" id="group<%= i %>" name="groupNumber" value="<%= i %>" required>
+                <label for="group<%= i %>"><%= i %></label>
+              </div>
+            <% } %>
+          </div>
+
+          <!-- Special Groups -->
+          <div class="special-groups">
+            <div class="group-option">
+              <input type="radio" id="groupA" name="groupNumber" value="A">
+              <label for="groupA">Alpha</label>
+            </div>
+            <div class="group-option">
+              <input type="radio" id="groupB" name="groupNumber" value="B">
+              <label for="groupB">Beta</label>
+            </div>
+            <div class="group-option">
+              <input type="radio" id="groupC" name="groupNumber" value="C">
+              <label for="groupC">Gamma</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <button type="submit">Join Group</button>
     </form>
-    <p id="groupError" class="error"></p>
+    <div id="groupError" class="error-message"></div>
   </div>
+
   <script src="/js/group.js"></script>
 </body>
 </html>
