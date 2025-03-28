@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Groups</title>
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/nav.css">
+
+</head>
+<body>
+  <div class="card">
+    <h1>Register</h1>
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="text" id="displayName" placeholder="Display Name" required>
+      <button type="submit">Register</button>
+    </form>
+    <p id="registerError" class="error"></p>
+  </div>
+
+  <div class="card">
+    <h1>Pick Your Number (1-12)</h1>
+    <form id="numberForm">
+      <select id="userSelect" required>
+        <option value="">-- Select Your Name --</option>
+      </select>
+      <input type="number" id="groupNumber" min="1" max="12" placeholder="Choose 1-12" required>
+      <button type="submit">Join Group</button>
+    </form>
+    <p id="numberError" class="error"></p>
+  </div>
+
+ 
+  <script src="/js/nav-loader.js" defer></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

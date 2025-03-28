@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Join a Group</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Join a Group</h1>
+    <form id="groupForm">
+     
+<select id="userSelect" required>
+  <option value="">Loading users...</option>
+</select>
+     
+       <select id="groupNumber" required>
+        <option value="">-- Select Number (1-12) --</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <!-- ... up to 12 ... -->
+      </select>
+      <button type="submit">Join Group</button>
+    </form>
+    <p id="groupError" class="error"></p>
+  </div>
+  <script src="/js/group.js"></script>
+</body>
+</html>
